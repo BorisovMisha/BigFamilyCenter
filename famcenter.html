@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Big Family</title>
+</head>
+<style>
+    * {box-sizing: border-box;} 
+    
+    .wrapper {
+          padding: 0;
+          width: 1200px;                    
+          border: 1px solid green;
+    }
+    
+    header {overflow: auto;}
+    
+    .logo {
+        float: left;
+        width: 124px;        
+        margin-left: 84px;
+        margin-top: 11px;
+        }
+    
+    .main-menu {
+      float: left;            
+      list-style: none;
+   /* border: 1px solid #e5e5e5; 
+      background-color: #f5f5f5; */
+        
+    }
+    .main-menu li {
+      display: inline-block;         
+      text-align: center;  
+      /* white-space: nowrap; */    
+    }
+    
+   /* .main-menu li:first-child {margin-left: 272px;} */
+    
+    .main-menu a {
+      font-family: Circe;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160.4%;
+      color: #000000;  
+      text-decoration: none;
+    }
+    
+    .menuline-1 {
+       width: 156px;
+       height: 5px;
+       background: #E09888;
+       border-radius: 5px 0px 0px 5px;
+    }
+    
+    .menuline-2 {
+      width: 167px;
+      height: 5px;
+      background: #C4E4DF;    
+    }
+    
+    .menuline-3 {
+      width: 143px;
+      height: 5px;
+      background: #F5DEA2;  
+    }
+    
+    .menuline-4 {
+      width: 137px;
+      height: 5px;
+      background: #B1BABD;    
+    } 
+    
+    .menuline-5 {
+      width: 151px;
+      height: 5px;
+      background: #F9CDA5;  
+    }
+    
+    .menuline-6 {
+      width: 174px;
+      height: 5px;
+      background: #D8D8D8;  
+    }
+   
+     /* блок с картинкой и девизом */
+    .motto {
+      width: 1054px;
+      height: 691px;
+      background-image: url(img/family.jpg);
+        
+      clear: both;  /* спускает ниже, после обтекания */    
+      margin-left: 87px;         
+      margin-top: 162px;    
+    }
+    
+    .motto p {
+      font-family: Sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 43px;
+      line-height: 113.4%; /* or 49px */
+      text-transform: uppercase; 
+    }
+    
+    .motto p span{
+     color: coral;              
+    }
+    
+    .big-img {
+      float: left;
+      width: 1054px;    
+    }
+
+    /* блок в центре, идёт сразу под картинкой */
+    .center-info {
+      width: 1017px;
+      height: 201px;    
+      margin: 0 auto;
+    }
+    
+    .center-info h1 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 35px;
+      text-transform: uppercase; 
+      margin: 0;    
+    }
+    
+    .center-info div {
+      width: 637px;
+      height: 17px;
+      background: #F5DEA2;
+      border-radius: 5px; 
+    }
+    
+     .center-info p {
+      font-family: Circle;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+     /* флекс-контейнер по центру */    
+    .center-block {  
+      display: flex;
+      flex-basis: 1017px;       
+      justify-content: space-between;           
+      margin: 0 99px 52px 92px;     
+    }
+     
+    /*флекс-элементы*/
+    .support{
+      display: flex;             
+      justify-content: center;
+      align-items: center;    
+      width: 286px;
+      height: 99px;
+      background: #FEBA93;
+      border-radius: 25px;          
+    }
+    
+    .community{
+      display: flex; 
+      justify-content: center;    
+      align-items: center;
+      width: 286px;
+      height: 99px;
+      background: #F5DEA2;
+      border-radius: 25px;              
+    } 
+    
+    .fampres{
+      display: flex;    
+      justify-content: center;    
+      align-items: center;    
+      width: 286px;
+      height: 99px;    
+      background: #C4E4DF;
+      border-radius: 25px;              
+    }
+
+    .support > p, .community > p, .fampres > p {
+      font-family: Epilogue;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 95.9%;
+      margin-left: 25px;       
+    }
+
+    /* блоки со ссылками */
+    .href-block-1, 
+    .href-block-2,
+    .href-block-3{      
+      list-style: none;  
+      width: 1017px;    
+      padding: 0;   
+      margin: 0 auto;    
+     }
+    
+    .href-block-1 li,
+    .href-block-2 li,
+    .href-block-3 li{
+      display: inline-block;    
+      text-align: center;    
+     }
+    
+    .href-block-1 li:first-child  {
+      text-align: left;      
+    }
+    .href-block-2 li:first-child  {
+      text-align: left;      
+    }
+    .href-block-3 li:first-child  {
+      text-align: left;      
+    }
+
+    
+    .href-block-1 li:last-child  {
+      text-align: right;
+    }
+    .href-block-2 li:last-child  {
+      text-align: right;      
+    }
+    .href-block-3 li:last-child  {
+      text-align: right;      
+    }
+
+
+    .href-block-1 a, 
+    .href-block-2 a,
+    .href-block-3 a{
+      font-family: Circe;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 244.19%; /* or 59px */
+      color: #000000;
+      text-decoration: none;
+     }
+    
+    .href-line-11 {
+      width: 218px;
+      height: 4px; 
+      background: #C4E4DF;
+      border-radius: 5px 0px 0px 5px;
+    }
+    
+    .href-line-12 {
+      width: 295px;
+      height: 4px;
+      background: #F5DEA2;
+    }
+    
+    .href-line-13 {
+      width: 276px;
+      height: 4px;
+      background: #FEBA93;  
+    }
+     
+    .href-line-14 {
+      width: 211px;
+      height: 4px;
+      background: #B1BABD;
+      border-radius: 0px 5px 5px 0px;    
+    } 
+     
+    .href-line-21 {
+      width: 225px;
+      height: 4px;
+      background: #D8D8D8;
+      border-radius: 5px 0px 0px 5px;    
+    }
+
+    .href-line-22 {
+      width: 309px;
+      height: 4px;
+      background: #E09888;
+    }
+
+    .href-line-23 { 
+      width: 201px;
+      height: 4px;
+      background: #F9CDA5;           
+    }
+    
+    .href-line-24 {
+      width: 265px;
+      height: 4px;
+      background: #C4E4DF;
+      border-radius: 0px 5px 5px 0px;
+    }
+    
+    .href-line-31{
+      width: 269px;
+      height: 4px; 
+      background: #F5DEA2;
+      border-radius: 5px 0px 0px 5px;
+    }
+    
+    .href-line-32{
+      width: 411px;
+      height: 4px;
+      background: #FEBA93;  
+    }
+    
+    .href-line-33{
+      width: 320px;
+      height: 4px;
+      background: #B1BABD;
+      border-radius: 0px 5px 5px 0px;    
+    }
+    
+     /*блок с заголовком h2*/
+    .nowdays{
+      margin: 73px auto 0 94px;          
+    }
+    .nowdays h2{
+      font-family: Circe;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 114.4%; /* or 27px */
+      text-transform: uppercase;        
+      margin: 0;    
+    }
+    .nowdays div{
+      width: 296px;
+      height: 17px;
+      background: #F5DEA2;
+      border-radius: 5px;
+    }
+    
+    /* блок внизу страницы, флекс-контейнер */
+    .down-block{
+      display: flex;
+      flex-basis: 1017px;     
+      justify-content: space-between;          
+      margin: 29px 99px 106px 92px;     
+    }
+    
+    .down-items{
+      display: flex;          
+      flex-direction: column;          
+      flex-basis: 308px;   /*549px*/          
+      border-radius: 25px;       
+    }
+    
+    .down-item-1{
+      border: 3px solid #F5DEA2;  
+    }
+    .down-item-2{
+      border: 3px solid #C4E4DF;     
+    }    
+    .down-item-3{
+      border: 3px solid #FA9F8B;   
+    }
+    
+    .down-item-1 h2,
+    .down-item-2 h2,
+    .down-item-3 h2{
+      font-family: Epilogue;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 114.4%; /* or 27px */
+      color: #000000;
+      margin-left: 37px;  
+    }
+
+    
+    .down-item-1 p{
+      width: 251px;
+      font-family: Circe;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 18px;
+      line-height: 124.9%;
+      color: #000000;           
+      margin:  13px 20px 29px 37px; 
+    }
+
+    .down-item-2 p{
+      width: 247px;
+      font-family: Circe;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 18px;
+      line-height: 125.9%;  
+      color: #000000;      
+      margin:  13px 30px 38px 32px;  
+    }
+    
+    .down-item-3 p{
+      width: 243px;
+      font-family: Circe;
+      font-style: normal;
+      font-weight: 350;
+      font-size: 18px;
+      line-height: 120.9%;
+      color: #000000;    
+      margin:  16px 33px 55px 32px;    
+    }
+    
+</style>
+
+<body>
+  <div class="wrapper">   
+   <header>    
+     <div class="logo">     
+       <img src="img/logo.jpg" alt="Family-Center-Logo">
+     </div> <!--logo--> 
+     <nav>
+      <ul class="main-menu">
+          <li>
+            <a href="#home">Home</a>
+            <div class="menuline-1"></div>
+          </li>
+          <li>
+            <a href="#about">About us</a>
+            <div class="menuline-2"></div>
+          </li>         
+          <li>
+            <a href="#pages">Pages</a>
+            <div class="menuline-3"></div>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+            <div class="menuline-4"></div>
+          </li>
+          <li>
+           <a href="#gallery">Gallery</a>
+           <div class="menuline-5"></div>
+          </li>
+          <li>
+            <a href="#contacts">Contacts</a>
+            <div class="menuline-6"></div>
+          </li>
+      </ul>
+     </nav> 
+     <div class="motto">
+       <p>Improve <br/><span>your family life</span>,<br/>knowledge &amp;<br/>understanding!</p>
+     </div>
+   </header>
+   <main>
+     <article class="center-info">
+      <h1>We'll surround your kids with love &amp; care!</h1>
+      <div></div>   
+      <p>It's no stretch that a person has a serious advantage in life if he/she comes from
+         a loving, supportive home. Many people still succeed though they come from less-than-ideal family situations, but having their basic needs met, knowing that their parents love them and learning life lessons at home.</p>
+     </article> <!--center-info--> 
+     
+     <div class="center-block">
+       <section class="support">
+         <img src="/img/man.png" width="58px" height="41px" alt="man">
+         <p>Parental<br/>Support</p>
+       </section>       
+       <section class="community">
+         <img src="/img/heart.png" width="54px" height="47px" alt="heart">
+         <p>Community<br/>Initiatives</p>
+       </section>            
+       <section class="fampres">
+         <img src="/img/sun.png" width="58px" height="55px" alt="sun">
+         <p>Family<br/>Preservation</p>
+       </section>
+     </div> <!--center-block-->  
+     
+     <ul class="href-block-1">                    
+       <li>
+         <a href="#health">Health &amp; Beauty</a>
+         <div class="href-line-11"></div>      
+       </li> 
+       <li>
+         <a href="#teen">Teen center</a>
+         <div class="href-line-12"></div>                  
+       </li>                                 
+       <li>
+         <a href="#school">Succeed at school</a>
+         <div class="href-line-13"></div>                                  
+       </li>
+       <li>
+         <a href="#tips">Tips &amp; advice</a>
+         <div class="href-line-14"></div>
+       </li>
+     </ul>                              
+
+      <ul class="href-block-2">                    
+       <li>
+         <a href="#marriage">Marriage center</a>
+         <div class="href-line-21"></div>      
+       </li> 
+       <li>
+         <a href="#therapy">Family therapy</a>
+         <div class="href-line-22"></div>                  
+       </li>                                 
+       <li>
+         <a href="#parenting">Parenting</a>
+         <div class="href-line-23"></div>                                  
+       </li>
+       <li>
+         <a href="#healthy">Healthy families</a>
+         <div class="href-line-24"></div>
+       </li>
+     </ul>                              
+
+      <ul class="href-block-3">                    
+       <li>
+         <a href="#healing">Healing from trauma</a>
+         <div class="href-line-31"></div>      
+       </li> 
+       <li>
+         <a href="#relation">Strong relationships</a>
+         <div class="href-line-32"></div>                  
+       </li>                                 
+       <li>
+         <a href="#advisor">Relationship advisor</a>
+         <div class="href-line-33"></div>                                  
+       </li>
+     </ul>
+                            
+     <div class="nowdays">
+       <h2>This week's</h2>
+       <div></div>  
+     </div>                                                                                           
+    
+    <div class="down-block">
+      <article class="down-items down-item-1">
+        <img src="img/sisters.jpg" width="308px" height="252px" alt="Nowdays news">
+        <h2>The power of sisters</h2>
+        <p>
+          At our Family Center, we have the honor of serving sisters who regularly need to get assistance on support and care of their siblings and families. Our attorney, who regularly represents his clients in the Family court, witnesses the power of sisters quite often.    
+        </p>       
+      </article>                                           
+      <article class="down-items down-item-2">
+       <img src="img/story.jpg" width="308px" height="252px" alt="Nowdays news">             
+        <h2>A story of 6 years</h2>
+        <p>
+          Please read below a story told by our clients not so long ago. 6 years ago they came to our center as the first-time parents. Now they have two kids and are expecting the third child. Here is how our program helped them grow as happy parents.  
+        </p>                                           
+      </article>                       
+      <article class="down-items down-item-3">
+         <img src="img/kids.jpg" width="308px" height="252px" alt="Nowdays news">                 <h2>Growing<br/>bicultural kids</h2>
+         <p>
+           This is a rather difficult topic to consider. In order to investigate it deeper and more profoundly, we have interviewed the real specialists on this topic. Here is what they’ve shared with us.
+         </p>             
+      </article>                                    
+    </div> <!--down-block-->                            
+   </main>        
+ </div>   
+</body>
+
+</html>
